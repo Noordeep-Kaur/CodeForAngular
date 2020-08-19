@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            border: solid;
+            border-bottom-color: black;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+
+        </head >
+        <body >
+        <div >
+        <h2 > Payment Options</h2 >
+        <form >
+        <br/>
+        <input type="radio" id="method1" name="payment" value="Credit Card" >
+        <label for="method1" > Credit Card</label > <br >
+        <input type="radio" id="method2" name="payment" value="Debit Card" >
+        <label for="method2" > Debit Card</label > <br >
+        <input type="radio" id="method3" name="payment" value="Net Banking" >
+        <label for="method3" > Net Banking</label > <br >
+        <input type="radio" id="method4" name="payment" value="UPI" >
+        <label for="method4" > UPI</label > <br >
+        <br/>
+        </form >
+        <br/>
+        <button id="pay" type="button" (click)="postToTicketTable()" [routerLink]="'/printticket'" > Pay</button >
+        </div >
+        </body >
+        </html >

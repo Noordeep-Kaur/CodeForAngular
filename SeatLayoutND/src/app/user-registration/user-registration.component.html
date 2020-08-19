@@ -1,0 +1,276 @@
+<div>
+  <div>               
+      <label>First Name</label>
+          <input type="text" [(ngModel)]="user.FirstName" required/><br/>         
+     <label>Last Name</label>
+          <input type="text" [(ngModel)]="user.LastName" required/><br/>            
+      <label>Gender </label>   <br/> 
+          <input type="radio" id="rdbMale" value="male" [(ngModel)]="user.Gender" checked required />Male
+          <input type="radio" id="rdbFemale" value="female"[(ngModel)]="user.Gender" />Female<br/>
+      <label>Email ID</label>
+          <input type="text" [(ngModel)]="user.EmailId" placeholder="abc@xyz.com" required/><br/> 
+      <label>Password</label>
+          <input type="password" [(ngModel)]="user.Password" required/><br/>     
+      <label>Confirm Password</label>        
+          <input type="password"/><br/>
+      <label>Date of Birth</label><br/>
+          <input type="date" [(ngModel)]="user.DOB" max="2020-08-20" required/><br/>    
+      <label>Phone no.</label>
+          <input type="text" [(ngModel)]="user.PhoneNumber" required/>   <br/>
+      <label>Address</label>
+          <input type="text" [(ngModel)]="user.Address" required/>   <br/>  
+      <label>State</label>
+          <!-- <input type="text" [(ngModel)]="user.State"/>   <br/>   -->
+          <select name="state" [(ngModel)]="user.State" required>
+              <option value="Andhra Pradesh">Andhra Pradesh</option>
+              <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+              <option value="Assam">Assam</option>
+              <option value="Bihar">Bihar</option>
+              <option value="Chandigarh">Chandigarh</option>
+              <option value="Chhattisgarh">Chhattisgarh</option>
+              <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+              <option value="Daman and Diu">Daman and Diu</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Lakshadweep">Lakshadweep</option>
+              <option value="Puducherry">Puducherry</option>
+              <option value="Goa">Goa</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Haryana">Haryana</option>
+              <option value="Himachal Pradesh">Himachal Pradesh</option>
+              <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+              <option value="Jharkhand">Jharkhand</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Manipur">Manipur</option>
+              <option value="Meghalaya">Meghalaya</option>
+              <option value="Mizoram">Mizoram</option>
+              <option value="Nagaland">Nagaland</option>
+              <option value="Odisha">Odisha</option>
+              <option value="Punjab">Punjab</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="Sikkim">Sikkim</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Telangana">Telangana</option>
+              <option value="Tripura">Tripura</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Uttarakhand">Uttarakhand</option>
+              <option value="West Bengal">West Bengal</option>
+              </select>
+      <label>City</label>
+          <!-- <input type="text" [(ngModel)]="user.City"/>   <br/>   -->
+         <select [(ngModel)]="user.City" value="" style="width:230" required>
+              <option selected="selected">-Select-</option>
+              <option>Ahmedabad</option>
+                <option>Bengaluru/Bangalore</option>
+                <option>Agartala</option>
+                <option>Agra</option>
+                <option>Ahmedabad</option>
+                <option>Ahmednagar</option>
+                <option>Aizawal</option>
+                <option>Ajmer</option>
+                <option>Aligarh</option>
+                <option>Allahabad</option>
+                <option>Ambala</option>
+                <option>Amritsar</option>
+                <option>Anand</option>
+                <option>Anantapur</option>
+                <option>Andra Pradesh-Other</option>
+                <option>Ankleshwar</option>
+                <option>Arunachal Pradesh-Other</option>
+                <option>Asansol</option>
+                <option>Assam-Other</option>
+                <option>Aurangabad</option>
+                <option>Bareilly</option>
+                <option>Bathinda</option>
+                <option>Belgaum</option>
+                <option>Bellary</option>
+                <option>Bengaluru/Bangalore</option>
+                <option>Bhagalpur</option>
+                <option>Bharuch</option>
+                <option>Bhavnagar</option>
+                <option>Bhillai</option>
+                <option>Bhopal</option>
+                <option>Bhubaneshwar</option>
+                <option>Bhuj</option>
+                <option>Bidar</option>
+                <option>Bihar-Other</option>
+                <option>Bilaspur</option>
+                <option>Bokaro</option>
+                <option>Calicut</option>
+                <option>Chandigarh</option>
+                <option>Chandigarh</option>
+                <option>Chandigarh</option>
+                <option>Chandigarh</option>
+                <option>Chennai</option>
+                <option>Chennai</option>
+                <option>Chhattisgarh-Other</option>
+                <option>Cochin</option>
+                <option>Coimbatore</option>
+                <option>Cuddalore</option>
+                <option>Cuttak</option>
+                <option>Dadra & Nagar Haveli-Silvassa</option>
+                <option>Dalhousie</option>
+                <option>Daman & Diu</option>
+                <option>Dehradun</option>
+                <option>Delhi</option>
+                <option>Delhi</option>
+                <option>Dhanbad</option>
+                <option>Dharmasala</option>
+                <option>Dharwad</option>
+                <option>Dimapur</option>
+                <option>Durgapur</option>
+                <option>Ernakulam</option>
+                <option>Erode</option>
+                <option>Faizabad</option>
+                <option>Faridabad</option>
+                <option>Gandhinagar</option>
+                <option>Gangtok</option>
+                <option>Ghaziabad</option>
+                <option>Gir</option>
+                <option>Goa-Other</option>
+                <option>Gorakhpur</option>
+                <option>Gujarat-Other</option>
+                <option>Gulbarga</option>
+                <option>Guntakal</option>
+                <option>Guntur</option>
+                <option>Gurgaon</option>
+                <option>Gurgaon</option>
+                <option>Guwahati</option>
+                <option>Gwalior</option>
+                <option>Haldia</option>
+                <option>Haryana-Other</option>
+                <option>Himachal Pradesh-Other</option>
+                <option>Hisar</option>
+                <option>Hosur</option>
+                <option>Hubli</option>
+                <option>Hyderabad/Secunderabad</option>
+                <option>Hyderabad/Secunderabad</option>
+                <option>Imphal</option>
+                <option>Indore</option>
+                <option>Itanagar</option>
+                <option>Jabalpur</option>
+                <option>Jaipur</option>
+                <option>Jaisalmer</option>
+                <option>Jalandhar</option>
+                <option>Jalgaon</option>
+                <option>Jammu and Kashmir-Other</option>
+                <option>Jammu</option>
+                <option>Jamnagar</option>
+                <option>Jamshedpur</option>
+                <option>Jharkhand-Other</option>
+                <option>Jodhpur</option>
+                <option>kakinada</option>
+                <option>Kandla</option>
+                <option>Kannur</option>
+                <option>Kanpur</option>
+                <option>Karnal</option>
+                <option>Karnataka-Other</option>
+                <option>Kerela-Other</option>
+                <option>Kharagpur</option>
+                <option>Kochi</option>
+                <option>Kolar</option>
+                <option>Kolhapur</option>
+                <option>Kolkatta</option>
+                <option>Kolkatta</option>
+                <option>Kollam</option>
+                <option>Kota</option>
+                <option>Kottayam</option>
+                <option>Kozhikode</option>
+                <option>Kulu/Manali</option>
+                <option>kurnool</option>
+                <option>Kurukshetra</option>
+                <option>Lucknow</option>
+                <option>Ludhiana</option>
+                <option>Madhya Pradesh-Other</option>
+                <option>Madurai</option>
+                <option>Maharashtra-Other</option>
+                <option>Mangalore</option>
+                <option>Manipur-Other</option>
+                <option>Mathura</option>
+                <option>Meerut</option>
+                <option>Meghalaya-Other</option>
+                <option>Mizoram-Other</option>
+                <option>Mohali</option>
+                <option>Moradabad</option>
+                <option>Mumbai Suburbs</option>
+                <option>Mumbai</option>
+                <option>Mumbai</option>
+                <option>Mysoru/Mysore</option>
+                <option>Nagaland-Other</option>
+                <option>Nagerkoil</option>
+                <option>Nagpur</option>
+                <option>Nasik</option>
+                <option>Navi Mumbai</option>
+                <option>Nellore</option>
+                <option>Nizamabad</option>
+                <option>Noida</option>
+                <option>Noida</option>
+                <option>Ooty</option>
+                <option>Orissa-Other</option>
+                <option>Other</option>
+                <option>Palakkad</option>
+                <option>Palghat</option>
+                <option>Panipat</option>
+                <option>Panjim/Panaji</option>
+                <option>Paradeep</option>
+                <option>Pathankot</option>
+                <option>Patiala</option>
+                <option>Patna</option>
+                <option>Pondichery</option>
+                <option>Porbandar</option>
+                <option>Pune</option>
+                <option>Pune</option>
+                <option>Punjab-Other</option>
+                <option>Puri</option>
+                <option>Raipur</option>
+                <option>Rajahmundry</option>
+                <option>Rajasthan-Other</option>
+                <option>Rajkot</option>
+                <option>Ranchi</option>
+                <option>Rohtak</option>
+                <option>Roorkee</option>
+                <option>Rourkela</option>
+                <option>Salem</option>
+                <option>Shillong</option>
+                <option>Shimla</option>
+                <option>Sikkim-Other</option>
+                <option>Silchar</option>
+                <option>Siliguri</option>
+                <option>Solapur</option>
+                <option>Srinagar</option>
+                <option>Surat</option>
+                <option>Tamil Nadu-Other</option>
+                <option>Thanjavur</option>
+                <option>Thrissur</option>
+                <option>Tirunalveli</option>
+                <option>Tirupati</option>
+                <option>Trichy</option>
+                <option>Tripura-Other</option>
+                <option>Trivandrum</option>
+                <option>Tuticorin</option>
+                <option>Udaipur</option>
+                <option>Ujjain</option>
+                <option>Uttar Pradesh</option>
+                <option>Uttaranchal</option>
+                <option>Vadodara/Baroda</option>
+                <option>Valsad</option>
+                <option>Vapi</option>
+                <option>Varanasi/Banaras</option>
+                <option>Vasco Da Gama</option>
+                <option>Vellore</option>
+                <option>Vijayawada</option>
+                <option>Visakhapatnam</option>
+                <option>Warangal</option>
+                <option>West Bengal</option>
+              </select>
+      <label>Pincode</label>
+          <input type="number" [(ngModel)]="user.Pincode"/>   <br/>  
+      <label>What Was Your First Pet's Name?</label>
+      <input type="text" [(ngModel)]="user.SecurityQuestion" required/>   <br/>   
+      <button  (click)="addUser()" class="btn btn-success" >Submit</button> 
+      <button (click)="reset()" class="btn btn-primary">Reset</button>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<p>
+  wallet works!
+</p>
+<p>wallet</p>
+<form #addClienForm="ngForm" (ngSubmit)="fetchOneWallet()">
+    <input type="number" #UID="ngModel" name="UID" [(ngModel)]="model.UID">
+    <button type="submit">Fetch</button>
+</form>
+<p *ngFor="let emp of emp">
+   Cash in your wallet  :{{emp.Wallet}}
+</p>
+
+<!-- <p>You have {{pass.wallet}} in your wallet.</p> -->

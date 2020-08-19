@@ -1,0 +1,12 @@
+<p>
+  previous-bookings works!
+</p>
+  
+<form #addClienForm="ngForm" (ngSubmit)="fetchBookings()">
+  <input type="number" #UID="ngModel" name="BookingUserID" [(ngModel)]="model.BookingUserID">
+  <button type="submit">Fetch</button>
+</form>
+<p *ngFor="let ticket of previous">
+  {{ticket.FromLocation}}------->{{ticket.ToLocation}}<br/>
+  
+</p>

@@ -1,0 +1,106 @@
+<!-- <head>
+  <base href="/">
+</head> -->
+
+<section >
+  <div>Website Name</div>
+  <a href="#">Home</a>&nbsp;
+  <a href="#">About</a>&nbsp;
+  <a href="#">Contact</a>
+  <button class="btn btn-secondary" [routerLink]="'/userlogin'">SignIn</button>
+  <button class="btn btn-danger" [routerLink]="'/userregistration'">SignUp</button>
+</section>
+<br/>
+<form #addClientForm="ngForm" (ngSubmit)="searchdata()" novalidate >  
+    <div class="row">    
+      <div >  </div>  
+   <div class="fromlocation">   
+     <label for="FromLocation">From Location</label>
+      <select (change)="populate($event.target.value)"  name="FromLocation" [(ngModel)]="model.TripID"  >
+       <option value="undefined" selected disabled>--Select FromLocation--</option>
+       <option *ngFor="let test of type$|async" [value]="test.TripID" 
+       
+       >{{test.FromLocation}}</option>   
+       
+      </select>
+       <!--<input  
+      type="text" #FromLocation="ngModel" name="FromLocation"  
+      [(ngModel)]="model.FromLocation"   
+      placeholder="From Location"  
+     />   
+     {{model.FromLocation|json}}-->
+
+  </div>     
+  <div class="tolocation">    
+       <!--<input type="text"  #ToLocation="ngModel" name="ToLocation"  
+      [(ngModel)]="model.ToLocation"   
+      placeholder="To Location"  
+       
+     /> -->  
+      <label for="ToLocation">To Location</label>
+     <select   >
+       <option value="undefined" selected disabled>--Select ToLocation--</option>
+       <option *ngFor="let locations of tolocation|async" [value]="locations.TripID" 
+       
+     >{{locations.ToLocation}}</option>
+     </select> 
+  </div>    
+  <div class="fromdate">
+    
+    <label for="myList">Date</label>
+    <input type="date"  #FromDate="ngModel" name="FromDate"  
+    [(ngModel)]="model.FromDate"   
+    placeholder="From Date"  
+     
+    />  
+</div>    
+  <div class="col-sm-3 form-group">    
+      <button type="submit"  class="btn btn-primary">Search</button>   
+  </div>  
+</div>  
+  </form>   
+
+<!-- <table class="table">  
+  <thead class="thead-dark">  
+    <tr>  
+      <th scope="col">CompanyName</th>
+      <th scope="col">FromLocation</th>
+      <th scope="col">ToLocation</th>
+      <th scope="col">FromTime</th>
+      <th scope="col">ToTime</th>   
+      <th scope="col">Fare</th>    
+      <th scope="col">Seats</th>  
+      <th scope="col" ></th>
+    </tr>   
+  </thead>  -->
+  <table class="table">
+  <tbody>
+    <tr *ngIf="emp">
+      <th>CompanyName</th>
+      <th>FromLocation</th>
+      <th>ToLocation</th>
+      <th>FromTime</th>
+      <th>ToTime</th>
+      <th>Seats</th>
+    </tr>
+    <tr *ngFor="let emp of emp">  
+      <td>{{emp.CompanyName}}</td>
+      <th scope="row">{{emp.FromLocation}}</th>
+      <th scope="row">{{emp.ToLocation}}</th>
+      <th scope="row">{{emp.FromTime}}</th>
+      <th scope="row">{{emp.ToTime}}</th> 
+      <td>{{emp.NumberOfSeats}}</td>
+      <td><button class="btn btn-dark" (click)="store(emp.TripID,emp.FromLocation,emp.ToLocation,
+        emp.FromTime,emp.ToTime,emp.FromDate)" [routerLink]="'/seatlayout'">ViewSeats</button></td>
+      
+      <!-- <td>{{emp.JoiningDate | date:'yyyy-MM-dd'}}</td>   -->
+    </tr>  
+     <!-- <tr *ngIf="!emp||emp.length==0">  
+      <td colspan="4">  
+          No Data Found  
+      </td>  
+    </tr>    -->
+  </tbody>  
+</table>
+<!-- 
+<router-outlet></router-outlet> -->

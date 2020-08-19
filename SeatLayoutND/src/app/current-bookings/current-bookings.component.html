@@ -1,0 +1,14 @@
+<p>
+  current-bookings works!
+</p>
+<form #addClienForm="ngForm" (ngSubmit)="fetchticket()">
+  <input type="number" #BookingUserID="ngModel" name="BookingUserID" [(ngModel)]="model.BookingUserID">
+  <button type="submit">Fetch</button>
+</form>
+<p *ngIf="current">
+  <span *ngFor="let ticket of current">
+      {{ticket.FromLocation}}------------>{{ticket.ToLocation}}<br/>
+      <button (click)="cancelTicket(model)">Cancel </button> 
+      <button>Print</button>
+  </span>
+</p>
